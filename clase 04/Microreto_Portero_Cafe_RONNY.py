@@ -17,7 +17,7 @@ elif energia >= 30 or cafe:
     mensaje = "Pasa por el cafe"
 # TODO: escribe mensajes claros para cada resultado.
 else:
-    mensaje = "El guarda esta pensando si  te deja entrar"
+    mensaje = "El guarda esta pensando si  te deja entrar"()
 
 
 print(mensaje)
