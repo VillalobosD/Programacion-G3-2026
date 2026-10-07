@@ -10,8 +10,7 @@ autorizacion = input("Tiene autorizacion? ").strip().lower() == "si"
 
 try:
     cantidad = int(input("Ingrese la Cantidad: "))
-    pass #La tarea
-
+    
 except ValueError:
    print("Error cantidad invalida, asignada -1")
    cantidad = -1
@@ -21,11 +20,12 @@ try:
 except ValueError:
     print("Lo dias no estan en el formato correcto")
     dias = -1
+    
     resultado =""
-if not nombre == "" or  kit  or cantidad <= 1 or dias <= 1:
+if not nombre or  kit == '' or cantidad < 1 or dias < 1:
     resultado = "Registro Rechazado: Datos invalidos "
 elif autorizacion and cantidad <= 3 and not dias > 7:
-    resultado = f"Solicitud Aprovado para {nombre}:{cantidad} kit (s)de {kit})."
+    resultado = f"Solicitud aprovada para {nombre}: {cantidad} kit(s) de {kit})."
 elif cantidad > 3 or dias > 7:
      resultado = "Solicitud enviada a revisión!"
 else:
