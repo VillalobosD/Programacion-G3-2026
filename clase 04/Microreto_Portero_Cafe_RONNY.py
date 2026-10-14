@@ -1,7 +1,7 @@
 """Microreto: el portero del café."""
 
-energia = int(input("Ingrese Cuanta Energia tienes de 0 a 100?: "))
-cafe = input("Traes cafe si / no: ").lower().strip() == "si"
+energia = int(input("Cdsadad?: "))
+cafe = input("sdsadsdsa si /  no: ").lower().strip() == "si"
 
 #energia = 
 #trae_cafe = input("¿Traes café? (si/no): ")
@@ -18,6 +18,7 @@ elif energia >= 30 or cafe:
 # TODO: escribe mensajes claros para cada resultado.
 else:
     mensaje = "El guarda esta pensando si  te deja entrar"()
+    
 
 
 print(mensaje)
