@@ -1,16 +1,28 @@
 """Caso 4: analice los registros de soporte sin crear funciones propias."""
 
-from incidencias import incidencias
-
+from incidencias import incidencias               
 # Cada incidencia es un diccionario: id, provincia, categoria,
 # minutos_atencion y resuelto (True o False).
+
+conteo_categorias = {
+    "Acceso": 0, 
+    "Equipo": 0, 
+    "Red": 0
+    }
+total_minutos = 0
+pendientes = 0
+provincias_pendientes = set()
+urgentes = []
+caso mas_largo = ("", 0)
 
 # TODO: Prepare un acumulador de minutos, un diccionario para contar
 #       "Acceso", "Equipo" y "Red", un contador de casos pendientes,
 #       un set de provincias con pendientes, una lista de tuplas de casos
 #       urgentes y una tupla para el caso con más minutos de atención.
+
 # TODO: Recorra incidencias una sola vez. Actualice los acumuladores y el
 #       conteo de la categoría de cada registro.
+
 # TODO: Si un caso NO está resuelto, cuéntelo y agregue su provincia al set.
 #       Si, además, tiene 60 minutos o más, agregue (id, minutos) a la lista
 #       de casos urgentes. Actualice la tupla del caso más largo si corresponde.
