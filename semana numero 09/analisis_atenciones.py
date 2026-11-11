@@ -7,26 +7,40 @@ y luego a 3 conforme verifique cada parte con python analisis_atenciones.py.
 from lector_csv import cargar_atenciones
 
 
-ETAPA = 1
+ETAPA = 2
 
 
 def explorar_atenciones(atenciones):
     """Recibe la lista de atenciones y muestra el total, los tipos y los campos."""
     # P1. Complete el lector y compruebe el mensaje de archivo faltante.
     print("P1. Archivo leído correctamente.")
+    atenciones = cargar_atenciones()
+    total = 0
+    for atencion in atenciones:
+        total += 1
+    print(f"Total de atenciones: {total}")
 
     # P2. Cuente las filas con un ciclo. Compruebe que obtuvo 12.
-
+        
     # P3. Ejemplo listo para ejecutar. Explique qué tipos y campos observa.
     primer_registro = atenciones[0]
-
+    print(f"Primer coleccion: {type(atenciones)}")
+    print(f"Tipos registro: {type(primer_registro)}")
+    
 
 def contar_y_limpiar(atenciones):
     """Recibe la lista de atenciones y muestra los conteos y sus comprobaciones."""
     print("Etapa 2. Complete y compruebe las preguntas 4 a 8.")
     # P4. Cuente los medicamentos tal como aparecen en el CSV con .get().
     # Muestre el contador y su total.
+    lista_medicamentos = []
+    for medicamento in atenciones:
+        nombre_medicamento = medicamento.get("medicamento", "")
+        lista_medicamentos.append(nombre_medicamento)
 
+    print(f"E4 total de medicamentos: {len(lista_medicamentos)}")
+    print(f"E4 lista de medicamentos: {lista_medicamentos}")
+    
     # P5. Muestre ejemplos de espacios o mayúsculas en hospital,
     # diagnostico y medicamento.
 
