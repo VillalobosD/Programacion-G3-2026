@@ -26,6 +26,12 @@ from nivel_9_agrupar import promedio_por_grupo
 def generar_reporte(ruta):
     """Devuelve el diccionario con los cuatro datos del reporte."""
     # su código aquí
+    return {
+        "estudiantes": len(cargar_notas(ruta)),
+        "aprobados": len(aprobados(ruta, 70)),
+        "en_riesgo": list(en_riesgo(ruta, 65, 80)["nombre"]),
+        "promedio_por_grupo": promedio_por_grupo(ruta).round(2).to_dict()
+    }
     return {}
 
 

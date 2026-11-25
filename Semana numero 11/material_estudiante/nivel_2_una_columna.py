@@ -15,7 +15,7 @@ import pandas as pd
 notas = pd.read_csv("notas.csv")
 
 # 1. Seleccione la columna "nombre" y guárdela en la variable nombres
-nombres = notas[____]
+nombres = notas["nombre"]
 
 # 2. Mire el resultado (estas líneas ya están listas)
 print(nombres.head(3))

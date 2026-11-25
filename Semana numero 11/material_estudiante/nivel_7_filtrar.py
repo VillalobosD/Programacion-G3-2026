@@ -18,8 +18,8 @@ from nivel_6_columna_nueva import notas_con_promedio
 def aprobados(ruta, minimo):
     """Estudiantes con promedio mayor o igual que 'minimo'."""
     notas = notas_con_promedio(ruta)    # cascada: nivel 6
-    # su código aquí
-    return notas
+    notas = notas[notas["promedio"] >= minimo]
+    return notas    
 
 
 if __name__ == "__main__":

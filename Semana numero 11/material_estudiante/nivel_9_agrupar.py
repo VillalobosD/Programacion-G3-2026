@@ -17,8 +17,9 @@ from nivel_6_columna_nueva import notas_con_promedio
 def promedio_por_grupo(ruta):
     """Promedio de 'promedio' en cada grupo."""
     notas = notas_con_promedio(ruta)    # cascada: nivel 6
-    # su código aquí
-    return None
+    notas = notas.groupby("grupo")["promedio"].mean()
+    
+    return notas
 
 
 if __name__ == "__main__":
