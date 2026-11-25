@@ -30,9 +30,8 @@ def promedio_examen_pandas(df: pd.DataFrame) -> float:
 
 
 def promedio_examen_nativo(filas: list) -> float:
-    """TODO: haga lo mismo con un ciclo for y un acumulador.
-    'filas' es una lista de diccionarios con la clave 'examen'."""
-    def promedio_examen_nativo(filas: list) -> float:
+    """Hace lo mismo que mean() usando un for."""
+
     suma = 0
 
     for fila in filas:
